@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="MonoGameTestDev.Core/MonoGameTestDev.Core.csproj" />
+  <Project Path="MonoGameTestDev.Play/MonoGameTestDev.Play.csproj" />
+</Solution>

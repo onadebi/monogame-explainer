@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 700" role="img" aria-labelledby="title description">
+  <title id="title">How to center a texture</title>
+  <desc id="description">Two diagrams compare placing a texture's top-left corner at the screen midpoint with centering it by leaving equal margins on both sides.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto-start-reverse">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#364152" />
+    </marker>
+    <style>
+      text { font-family: Segoe UI, sans-serif; fill: #202a35; }
+      .label { font-size: 15px; }
+      .small { font-size: 13px; }
+      .heading { font-size: 21px; font-weight: 650; }
+      .screen { fill: #f4f1e8; stroke: #364152; stroke-width: 2; }
+      .texture { fill: #2e7180; stroke: #174751; stroke-width: 2; }
+      .midpoint { stroke: #cb6046; stroke-width: 2; stroke-dasharray: 6 5; }
+      .measure { stroke: #364152; stroke-width: 1.5; marker-start: url(#arrow); marker-end: url(#arrow); }
+    </style>
+  </defs>
+
+  <rect width="1100" height="700" fill="#fbfaf6" />
+  <text x="40" y="54" font-size="29" font-weight="700">Centering a texture</text>
+  <text x="40" y="82" font-size="16">Draw position is the texture's top-left corner.</text>
+
+  <rect x="30" y="112" width="505" height="550" rx="8" fill="#ffffff" stroke="#d5d9dc" />
+  <text x="55" y="151" class="heading">1. Put the top-left at the midpoint</text>
+  <text x="55" y="178" class="small">Position = (screen width / 2, screen height / 2)</text>
+  <rect x="75" y="220" width="420" height="315" class="screen" />
+  <text x="85" y="244" class="small">Screen: 1200 x 900</text>
+  <line x1="285" y1="220" x2="285" y2="535" class="midpoint" />
+  <line x1="75" y1="377.5" x2="495" y2="377.5" class="midpoint" />
+  <circle cx="285" cy="377.5" r="5" fill="#cb6046" />
+  <rect x="285" y="377.5" width="210" height="126" class="texture" />
+  <text x="300" y="424" fill="#ffffff" font-size="15">Texture</text>
+  <text x="300" y="445" fill="#ffffff" font-size="12">top-left is at midpoint</text>
+  <text x="55" y="570" class="label">The image starts at the midpoint,</text>
+  <text x="55" y="593" class="label">so its own center lands down and right.</text>
+  <text x="55" y="631" class="small" fill="#a74331">The position is not the image's center.</text>
+
+  <rect x="565" y="112" width="505" height="550" rx="8" fill="#ffffff" stroke="#d5d9dc" />
+  <text x="590" y="151" class="heading">2. Leave equal margins</text>
+  <text x="590" y="178" class="small">Subtract texture size, then split the remainder in half.</text>
+  <rect x="610" y="220" width="420" height="315" class="screen" />
+  <text x="620" y="244" class="small">Screen: 1200 x 900</text>
+  <line x1="820" y1="220" x2="820" y2="535" class="midpoint" />
+  <line x1="610" y1="377.5" x2="1030" y2="377.5" class="midpoint" />
+  <circle cx="820" cy="377.5" r="5" fill="#cb6046" />
+  <rect x="715" y="314.5" width="210" height="126" class="texture" />
+  <text x="730" y="362" fill="#ffffff" font-size="15">Texture</text>
+  <text x="730" y="383" fill="#ffffff" font-size="12">center matches midpoint</text>
+  <line x1="610" y1="462" x2="715" y2="462" class="measure" />
+  <line x1="925" y1="462" x2="1030" y2="462" class="measure" />
+  <text x="590" y="570" class="label">Equal space on both sides means</text>
+  <text x="590" y="593" class="label">the texture's center matches the screen's.</text>
+  <text x="590" y="631" class="small">x = (screen width - texture width) / 2</text>
+</svg>
